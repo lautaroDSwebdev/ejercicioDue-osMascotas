@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.model.DuenioModel;
-import com.example.demo.service.dueño.IDuenioService;
+import com.example.demo.service.duenio.IDuenioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,10 +17,10 @@ public class DuenioController  {
 
 
     //Este codigo era para ver si se puede capturar por id una mascota y a que dueño pertenece
-        @GetMapping("/get/{id_duenio}")
-       public ResponseEntity<?>  findDuenioMascotaById(@PathVariable Long id_duenio){
+        @GetMapping("/get/{id_dueno}")
+       public ResponseEntity<?>  findDuenioMascotaById(@PathVariable Long id_dueno){
             for (DuenioModel e  :  due_serv.getDuenio()) {
-                if(e.getId_duenio().equals(id_duenio)){
+                if(e.getId_duenio().equals(id_dueno)){
                      return  ResponseEntity.ok(e);
                 }
             }

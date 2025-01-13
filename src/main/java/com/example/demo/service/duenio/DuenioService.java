@@ -1,4 +1,4 @@
-package com.example.demo.service.dueño;
+package com.example.demo.service.duenio;
 
 //import com.example.demo.dto.DuenioMascotaDTOModel;
 import com.example.demo.model.DuenioModel;
