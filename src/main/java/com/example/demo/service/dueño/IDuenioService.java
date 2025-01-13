@@ -1,10 +1,9 @@
-package com.example.demo.service;
+package com.example.demo.service.dueño;
 
 //import com.example.demo.dto.DuenioMascotaDTOModel;
 import com.example.demo.model.DuenioModel;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface IDuenioService {
 
