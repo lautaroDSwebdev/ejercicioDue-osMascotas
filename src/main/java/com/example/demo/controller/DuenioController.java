@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -21,10 +23,10 @@ public class DuenioController  {
        public ResponseEntity<?>  findDuenioMascotaById(@PathVariable Long id_dueno){
             for (DuenioModel e  :  due_serv.getDuenio()) {
                 if(e.getId_duenio().equals(id_dueno)){
-                     return  ResponseEntity.ok(e);
+                     return  ResponseEntity.noContent().build();
                 }
             }
-           return  ResponseEntity.status(HttpStatus.NOT_FOUND).body("No de pudo encontrar");
+           return  ResponseEntity.notFound().build();
       }
 
 
@@ -35,9 +37,14 @@ public class DuenioController  {
     }
 
     @PostMapping("/post")
-    public String postDueño(@RequestBody DuenioModel due){
+    public ResponseEntity<?>  postDueño(@RequestBody DuenioModel due){
         due_serv.postDuenio(due);
-        return "dueño creado con exito";
+        URI location = ServletUriComponentsBuilder
+                .fromCurrentRequest()
+                .path("/{dueño}")
+                .buildAndExpand(due.getNombre_duenio())
+                .toUri();
+        return ResponseEntity.created(location).build();
     }
 
     @DeleteMapping("/del/{id_due}")
