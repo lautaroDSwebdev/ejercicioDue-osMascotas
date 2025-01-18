@@ -12,7 +12,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/dueño")
+@RequestMapping("/duenio")
 public class DuenioController  {
     @Autowired
     private IDuenioService due_serv;
@@ -41,10 +41,10 @@ public class DuenioController  {
         due_serv.postDuenio(due);
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
-                .path("/{dueño}")
-                .buildAndExpand(due.getNombre_duenio())
+                .path("/{id_dueno}")
+                .buildAndExpand(due.getId_duenio())
                 .toUri();
-        return ResponseEntity.created(location).build();
+        return ResponseEntity.created(location).body(due);
     }
 
     @DeleteMapping("/del/{id_due}")
