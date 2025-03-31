@@ -14,21 +14,24 @@ public class DuenioModel {
     private Long id_duenio;
     private String nombre_duenio;
     private String apellido;
-    private int celular;
-    private int dni;
+    private Integer celular;
+    private Integer dni;
     @OneToMany
     private List<MascotasModel> list_mascotas;
     public DuenioModel() {
     }
 
-    public DuenioModel(Long id_duenio, String nombre_duenio,
-                       String apellido, int celular, int dni,
-                       List<MascotasModel> list_mascotas) {
-        this.id_duenio = id_duenio;
-        this.nombre_duenio = nombre_duenio;
+    public DuenioModel(String apellido,
+                       Integer celular,
+                       Integer dni,
+                       Long id_duenio,
+                       List<MascotasModel> list_mascotas,
+                       String nombre_duenio) {
         this.apellido = apellido;
         this.celular = celular;
         this.dni = dni;
+        this.id_duenio = id_duenio;
         this.list_mascotas = list_mascotas;
+        this.nombre_duenio = nombre_duenio;
     }
 }

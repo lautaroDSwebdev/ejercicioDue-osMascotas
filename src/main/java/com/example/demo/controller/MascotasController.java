@@ -13,13 +13,18 @@ import java.util.List;
 @RequestMapping("/mascota")
 public class MascotasController {
 
+
+
+    //    ESTO ES INYECCION DE DEPENCENCIAS
+    //    LO MISMO QUE ESTO QUE HACIAS EN JAVA VANILLA IMascotaService masc_service = new IMascotaService()
     @Autowired
     private IMascotaService masc_service;
-    @GetMapping("/get/{Id_mascota}")
-    public ResponseEntity<?> getMascota(@PathVariable Long Id_mascota){
 
+
+    @GetMapping("/get/{id_mascota}")
+    public ResponseEntity<?> getMascota(@PathVariable Long id_mascota){
         for (MascotasModel e : masc_service.GetMascotas()) {
-            if (e.getId_mascota().equals(Id_mascota)){
+            if (e.getId_mascota().equals(id_mascota)){
                 return ResponseEntity.ok(e);
             }
         }

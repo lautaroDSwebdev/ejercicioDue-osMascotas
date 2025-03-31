@@ -14,6 +14,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/duenio")
 public class DuenioController  {
+
+//    ESTO ES INYECCION DE DEPENCENCIAS
+//    LO MISMO QUE ESTO QUE HACIAS EN JAVA VANILLA IDuenioService due_serv = new IDuenioService()
     @Autowired
     private IDuenioService due_serv;
 
@@ -23,7 +26,7 @@ public class DuenioController  {
        public ResponseEntity<?>  findDuenioMascotaById(@PathVariable Long id_dueno){
             for (DuenioModel e  :  due_serv.getDuenio()) {
                 if(e.getId_duenio().equals(id_dueno)){
-                     return  ResponseEntity.noContent().build();
+                     return  ResponseEntity.ok(e);
                 }
             }
            return  ResponseEntity.notFound().build();

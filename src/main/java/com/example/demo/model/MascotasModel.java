@@ -22,11 +22,11 @@ public class MascotasModel {
     public MascotasModel() {
     }
 
-    public MascotasModel(Long id_mascota, String nombre_mascota, String especie, String raza, String color) {
+    public MascotasModel(String color, String especie, Long id_mascota, String nombre_mascota, String raza) {
+        this.color = color;
+        this.especie = especie;
         Id_mascota = id_mascota;
         this.nombre_mascota = nombre_mascota;
-        this.especie = especie;
         this.raza = raza;
-        this.color = color;
     }
 }

@@ -13,11 +13,9 @@ public class DuenioService implements IDuenioService{
 
     @Autowired
     private IDuenioRepo duenio_repo;
-//    @Autowired
-//    private IDuenioService duenio_serv_dao;
+    
 
-
-
+    
     @Override
     public List<DuenioModel> getDuenio() {
         List<DuenioModel> get_duenio = duenio_repo.findAll();
