@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.model.DuenioModel;
 import com.example.demo.service.duenio.IDuenioService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,7 @@ public class DuenioController  {
 
 //    ESTO ES INYECCION DE DEPENCENCIAS
 //    LO MISMO QUE ESTO QUE HACIAS EN JAVA VANILLA IDuenioService due_serv = new IDuenioService()
+    @Qualifier("listaDuenio")
     @Autowired
     private IDuenioService due_serv;
 

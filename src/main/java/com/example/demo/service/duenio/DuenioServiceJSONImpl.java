@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.util.List;
 
 import com.example.demo.repository.IDuenioRepo;
-@Primary
 @Service
 public class DuenioServiceJSONImpl implements IDuenioService {
 

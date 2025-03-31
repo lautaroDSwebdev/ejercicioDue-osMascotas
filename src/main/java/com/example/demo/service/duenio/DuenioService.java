@@ -4,11 +4,12 @@ package com.example.demo.service.duenio;
 import com.example.demo.model.DuenioModel;
 import com.example.demo.repository.IDuenioRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
-@Service
+@Service("listaDuenio")
 public class DuenioService implements IDuenioService{
 
     @Autowired
