@@ -24,25 +24,25 @@ public class DuenioService implements IDuenioService{
 
 
 
-    @Override
-    public void postDuenio(DuenioModel e) {
-        duenio_repo.save(e);
-    }
-
-    @Override
-    public void deleteDuenio(Long id) {
-        duenio_repo.deleteById(id);
-    }
-
-    @Override
-    public DuenioModel findDuenio(Long id) {
-        DuenioModel find_due = duenio_repo.findById(id).orElse(null);
-
-        return find_due;
-    }
-
-    @Override
-    public void putDuenio(DuenioModel due) {
-            this.postDuenio(due);
-    }
+//     @Override
+//     public void postDuenio(DuenioModel e) {
+//         duenio_repo.save(e);
+//     }
+//
+//     @Override
+//     public void deleteDuenio(Long id) {
+//         duenio_repo.deleteById(id);
+//     }
+//
+//     @Override
+//     public DuenioModel findDuenio(Long id) {
+//         DuenioModel find_due = duenio_repo.findById(id).orElse(null);
+//
+//         return find_due;
+//     }
+//
+//     @Override
+//     public void putDuenio(DuenioModel due) {
+//             this.postDuenio(due);
+//     }
 }

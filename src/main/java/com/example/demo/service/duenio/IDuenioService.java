@@ -8,10 +8,9 @@ import java.util.List;
 public interface IDuenioService {
 
     public List<DuenioModel> getDuenio();
-//    public Optional<DuenioMascotaDTOModel> getDuenioById(Long id);
-    public void postDuenio(DuenioModel e);
-    public void deleteDuenio(Long id);
-    public DuenioModel findDuenio(Long id);
-    public void putDuenio(DuenioModel due);
+//     public void postDuenio(DuenioModel e);
+//     public void deleteDuenio(Long id);
+//     public DuenioModel findDuenio(Long id);
+//     public void putDuenio(DuenioModel due);
 
 }

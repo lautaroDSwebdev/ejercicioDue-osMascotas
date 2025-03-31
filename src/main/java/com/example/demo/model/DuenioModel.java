@@ -18,8 +18,10 @@ public class DuenioModel {
     private Integer dni;
     @OneToMany
     private List<MascotasModel> list_mascotas;
+
     public DuenioModel() {
     }
+
 
     public DuenioModel(String apellido,
                        Integer celular,

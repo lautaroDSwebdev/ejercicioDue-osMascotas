@@ -1,0 +1,39 @@
+[
+    {
+        "id_duenio": 1,
+        "nombre_duenio": "Alvarooooooooooooooooooooooooooooo",
+        "apellido": "Rodrigubdfbdfbbdbdfez",
+        "celular": 3243432,
+        "dni": 4335433,
+        "list_mascotas": [
+            {
+                "nombre_mascota": "Firulais",
+                "especie": "Canino",
+                "raza": "Collie",
+                "color": "Amarillo",
+                "id_mascota": 1
+            },
+            {
+                "nombre_mascota": "Bruno",
+                "especie": "Ave",
+                "raza": "Tucan",
+                "color": "Rojo",
+                "id_mascota": 53
+            },
+            {
+                "nombre_mascota": "Rio",
+                "especie": "Ave",
+                "raza": "Wakamayo",
+                "color": "Azul",
+                "id_mascota": 54
+            },
+            {
+                "nombre_mascota": "Felipe",
+                "especie": "Ave",
+                "raza": "Cacatua",
+                "color": "Turquesa",
+                "id_mascota": 55
+            }
+        ]
+    }
+]

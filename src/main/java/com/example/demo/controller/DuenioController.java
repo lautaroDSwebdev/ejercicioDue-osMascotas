@@ -39,26 +39,26 @@ public class DuenioController  {
         return due_serv.getDuenio();
     }
 
-    @PostMapping("/post")
-    public ResponseEntity<?>  postDueño(@RequestBody DuenioModel due){
-        due_serv.postDuenio(due);
-        URI location = ServletUriComponentsBuilder
-                .fromCurrentRequest()
-                .path("/{id_dueno}")
-                .buildAndExpand(due.getId_duenio())
-                .toUri();
-        return ResponseEntity.created(location).body(due);
-    }
-
-    @DeleteMapping("/del/{id_due}")
-    public String delDueño( @PathVariable Long id_due){
-        due_serv.deleteDuenio(id_due);
-        return "Dueño eliminado con exito";
-    }
-    @PutMapping("/put")
-    public DuenioModel putDueño(@RequestBody DuenioModel due){
-        due_serv.putDuenio(due);
-        return due_serv.findDuenio(due.getId_duenio());
-
-    }
+//     @PostMapping("/post")
+//     public ResponseEntity<?>  postDueño(@RequestBody DuenioModel due){
+//         due_serv.postDuenio(due);
+//         URI location = ServletUriComponentsBuilder
+//                 .fromCurrentRequest()
+//                 .path("/{id_dueno}")
+//                 .buildAndExpand(due.getId_duenio())
+//                 .toUri();
+//         return ResponseEntity.created(location).body(due);
+//     }
+//
+//     @DeleteMapping("/del/{id_due}")
+//     public String delDueño( @PathVariable Long id_due){
+//         due_serv.deleteDuenio(id_due);
+//         return "Dueño eliminado con exito";
+//     }
+//     @PutMapping("/put")
+//     public DuenioModel putDueño(@RequestBody DuenioModel due){
+//         due_serv.putDuenio(due);
+//         return due_serv.findDuenio(due.getId_duenio());
+//
+//     }
 }
